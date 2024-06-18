@@ -1,0 +1,333 @@
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 32,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+]
+
+campaignTrail_temp.election_json = [
+    {
+        "model": "campaign_trail.election",
+        "pk": 21,
+        "fields": {
+            "year": 2020,
+            "summary": "<p>2020 has been regarded as one of the most chaotic years in world history, including in the United States. Even before the COVID-19 pandemic, President Donald Trump has been impeached and removed from office due to obstruction of Congress and abuse of power, after he solicited the Ukrainian Government to investigate former Vice President Joe Biden in order to help his re-election bid in November. <p><p>After Trump was removed, Mike Pence was elevated to the presidency. Little did he know that he'd have to face a global pandemic and social unrest to the likes this country has never seen before. Will his handling of these crises save his presidential career? Or will the sour environment towards Republicans hand Joe Biden the presidency, giving it back to the Democrats? </p>",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg",
+            "winning_electoral_vote_number": 270,
+            "advisor_url": "https://s.abcnews.com/images/Politics/Trump_quayle_split_as_160512_16x9_1600.jpg",
+            "recommended_reading": "<ul>\n<li><a href=https://www.chicagotribune.com/opinion/editorials/ct-edit-chicago-tribune-biden-endorsement-20200925-lnyxsb5qvrftnjjmj3rnzj33jy-story.html>Our Case For Joe Biden</a></li>\n<li><a href=https://nationalinterest.org/feature/case-trump-166808>The Case For Trump</a></li>\n<li><a href=https://www.npr.org/2020/11/18/935730100/how-biden-won-ramping-up-the-base-and-expanding-margins-in-the-suburbs>How Biden Won: Ramping Up The Base And Expanding Margins In The Suburbs</a></li>\n<li><a href=https://www.prospectmagazine.co.uk/politics/donald-trump-joe-biden-us-election-almost-win-votes-concede>Why Did Trump Almost Win?</a></li>\n<li><a href=https://www.hoover.org/research/no-evidence-voter-fraud-guide-statistical-claims-about-2020-election>No Evidence For Voter Fraud: A Guide To Statistical Claims About The 2020 Election</a></li>\n</ul>",
+            "has_visits": 1,
+            "no_electoral_majority_image": "https://www.jetsimon.com/public/static/images/2012-no-majority.jpg",
+            "creator": "Dan Bryan",
+            "display_year": "2020: Republican Chaos"
+        }
+    }
+]
+
+campaignTrail_temp.candidate_json = [
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 300,
+        "fields": {
+            "first_name": "Joe",
+            "last_name": "Biden",
+            "election": 21,
+            "party": "Democrat",
+            "state": "Delaware",
+            "priority": 1,
+            "description": "<p>Former Vice President Joe Biden. Not playable.",
+            "color_hex": "#0000d1",
+            "secondary_color_hex": "#90C0FF",
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/jp4zPXO.png",
+            "electoral_victory_message": "",
+            "electoral_loss_message": "",
+            "no_electoral_majority_message": "",
+            "description_as_running_mate": "",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 301,
+        "fields": {
+            "first_name": "Mike",
+            "last_name": "Pence",
+            "election": 21,
+            "party": "Republican",
+            "state": "Indiana",
+            "priority": 2,
+            "description": "<p>What a year for Mike Pence. After Donald Trump's impeachment and removal from office, he was elevated to the presidency, and about to face one of the most tumultuous years in modern history. From a virus spread worldwide from a seafood market in Wuhan, to the untimely deaths of George Floyd, Breonna Taylor, and Jacob Blake causing riots and civil unrest in cities across the country, to Vice Presidential confirmation hearings, to constant attacks tying him to the impeached former President, Mike Pence is trying his hardest to bring the country together. Will his handling of these crises save his already slim re-election chances? Or will the sour national environment give Pence the shortest presidency since William Henry Harrison? </p>",
+            "color_hex": "#d10000",
+            "secondary_color_hex": "#FFA0A0",
+            "is_active": 1,
+            "image_url": "https://i.imgur.com/mIsw7Up.png",
+            "electoral_victory_message": "",
+            "electoral_loss_message": "",
+            "no_electoral_majority_message": "<h3>We're deadlocked!</h3><p>In spite of the 269-269 tie in the electoral college, Republicans control a majority of state delegations in the House of Representatives. This could be what saves your presidency, and gives you a full term as President of the United States. You can also run again in 2024 at a chance to give you the longest presidency since FDR.</p>",
+            "description_as_running_mate": "",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 302,
+        "fields": {
+            "first_name": "Mike",
+            "last_name": "Lindell",
+            "election": 21,
+            "party": "Patriot",
+            "state": "Minnesota",
+            "priority": 3,
+            "description": "'",
+            "color_hex": "#8a00bd",
+            "secondary_color_hex": "#FFFFC0",
+            "is_active": 0,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mike_Lindell_%2850755882433%29_%28cropped%29.jpg/330px-Mike_Lindell_%2850755882433%29_%28cropped%29.jpg",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 303,
+        "fields": {
+            "first_name": "Howie",
+            "last_name": "Hawkins/Other",
+            "election": 21,
+            "party": "Green",
+            "state": "New York",
+            "priority": 4,
+            "description": "'",
+            "color_hex": "#00C100",
+            "secondary_color_hex": "#A1FFA1",
+            "is_active": 0,
+            "image_url": "'",
+            "electoral_victory_message": "'",
+            "electoral_loss_message": "'",
+            "no_electoral_majority_message": "'",
+            "description_as_running_mate": "'",
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50000,
+        "fields": {
+            "first_name": "Nikki",
+            "last_name": "Haley",
+            "election": 21,
+            "party": "Republican",
+            "state": "South Carolina",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#ff0000",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/N6NRNSi.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "<p>This is who the Republicans were looking for at this time. A compassionate conservative who served in the Trump administration and is ready to turn the page on his administration. Someone who can make history, as not only the first female Vice President, as well as the first Asian-American Vice President. <p><p>While some of Trump's core supporters may be let down by Haley not embracing the former President, that's only to be expected right? She can certainly help you unite the Republican Party, and can contrast to the 77-year-old former Vice President who has served in politics for fifty years very well. While her home state of South Carolina is not in contention this year, the rest of the Southern Atlantic from Virginia to Florida is expected to be extremely competitive, and Haley can give you the critical boost you need to win these do-or-die battleground states.",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50001,
+        "fields": {
+            "first_name": "John",
+            "last_name": "Thune",
+            "election": 21,
+            "party": "Republican",
+            "state": "South Dakota",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#ff0000",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/John_Thune_117th_Congress_portrait.jpg/330px-John_Thune_117th_Congress_portrait.jpg",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "<p>After being Senate Majority Whip and Chair of the Senate Republican Committee, it only seemed fitting that he would get appointed as Vice President. A guy that the entire Republican Party can get behind, and one who is not too aligned to the former President either.<p><p>Thune can certainly help you bring back the Romney voters who rejected Trump in 2016, as well as libertarians who could be crucial in giving you a full term in office. In contrast, many hardcore Trump supporters and blue-collar voters may be turned off by his strong condemnation of the former President, as well as his support of modernizing NAFTA. While South Dakota wasn't going to be competitive anyways, Thune could be a huge asset in winning states like Wisconsin and Minnesota, which could be must-win country for you. </p>",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50002,
+        "fields": {
+            "first_name": "Paul",
+            "last_name": "Ryan",
+            "election": 21,
+            "party": "Republican",
+            "state": "Wisconsin",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#ff0000",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Paul_Ryan_official_photo.jpg",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "<p>This was gonna be a very tough sell for the hardcore Trumpers, but again, a lot of Democrats crossed over and appointed Paul Ryan. This is the same guy who lost his bid for the vice presidency with Mitt Romney just eight short years ago in a similarly bad environment for Republicans. So there is no doubt that this will cause some concerns among Republicans, but he was the former Speaker of the House, and he wanted to be VP anyways. <p><p>Most of Trump's hardcore supporters are turned off, and this confirmation is expected to fire up Mike Lindell's pro-Trump third-party campaign. However, Ryan could help among establishment Republicans who rejected Trump four years ago, and could be critical in keeping the all-important Wisconsin in the Republican column in November.</p>",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50003,
+        "fields": {
+            "first_name": "Tom",
+            "last_name": "Cotton",
+            "election": 21,
+            "party": "Republican",
+            "state": "Arkansas",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#ff0000",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/DSDckkx.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "<p>Some may say this was the right guy to unite the party, including the Trump wing. Right alongside the former President on policies, he refused to back down when his man was getting impeached. But all that mattered was that he could get the Trump wing on board in order to win 2020, and he's quite youthful too. His confirmation was quite narrow too, and all the while, Democrats cry about him becoming the next Dan Quayle.<p><p>Cotton is sure to help you with the Trump wing, and hurt Lindell's candidacy a lot. He is a strong social conservative just like you, which is expected to help you tremendously in the South, especially his home state of Arkansas. Just don't align with Trump too heavily, as the national environment is strongly against him right now, and you want to win right?</p>",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    }
+]
+
+campaignTrail_temp.running_mate_json = [
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 124796,
+        "fields": {
+            "candidate": 301,
+            "running_mate": 50000
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 87723,
+        "fields": {
+            "candidate": 301,
+            "running_mate": 50001
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 161595,
+        "fields": {
+            "candidate": 301,
+            "running_mate": 50003
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 107944,
+        "fields": {
+            "candidate": 301,
+            "running_mate": 50002
+        }
+    }
+]
+
+campaignTrail_temp.credits = "Environmental_Cap104"
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 21,
+        "candidates": [
+            300,
+            301,
+            302,
+            303
+        ]
+    }
+]
+
+campaignTrail_temp.opponents_weighted_json = [
+    {
+        "election": 21,
+        "candidates": [
+            300,
+            301,
+            302,
+            303
+        ]
+    }
+]
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 21,
+        "year": 2020,
+        "is_premium": 0,
+        "display_year": "2020: Republican Chaos"
+    }
+]
+
+jet_data = {
+    "headerColor": "#a30021",
+    "windowColor": "#2c2626",
+    "containerColor": "#5e5e5e",
+    "innerWindowColor": "#4f4f4f",
+    "bannerImageUrl": "https://i.imgur.com/PrVYGCf.png",
+    "backgroundImageUrl": "https://nu.cw/wp-content/uploads/2021/01/impeachment-trump-als-eerste-president-ooit-voor-tweede-keer-aangeklaagd.jpg",
+    "endingTextColor": "#000000",
+    "customQuote": ""
+}
+
+//#startcode
+
+
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#a30021";
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#2c2626";
+
+document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+
+$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+
+$(".container")[0].style.backgroundColor = "#5e5e5e";
+
+document.getElementById("header").src = "https://i.imgur.com/PrVYGCf.png";
+
+document.body.background = "https://nu.cw/wp-content/uploads/2021/01/impeachment-trump-als-eerste-president-ooit-voor-tweede-keer-aangeklaagd.jpg";
+
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#4f4f4f!important;}</style>";
+
+//#endcode
