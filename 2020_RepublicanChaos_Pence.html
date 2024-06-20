@@ -274,7 +274,7 @@ campaignTrail_temp.questions_json = [
         "pk": 42518,
         "fields": {
             "priority": 1,
-            "description": "COVID cases rise",
+            "description": "Within a week of election day, the CDC has reported a rise in COVID-19 cases with daily cases averaging 40,000 a day.",
             "likelihood": 1
         }
     },
@@ -283,7 +283,7 @@ campaignTrail_temp.questions_json = [
         "pk": 42519,
         "fields": {
             "priority": 1,
-            "description": "Visiting States",
+            "description": "It is almost here. You only have four days left to make your case to the American people that you deserve a full term as President. What states will you focus on most in the final stretch?",
             "likelihood": 1
         }
     }
@@ -1071,7 +1071,7 @@ campaignTrail_temp.answers_json = [
         "pk": 42520,
         "fields": {
             "question": 42519,
-            "description": "g"
+            "description": "We need to be in the Upper Midwest; that's where Donald and I got elected four years ago. As long as we win Wisconsin and Michigan again, and possibly flip Minnesota, we're in good shape to win this election. Let's run the same strategy in these states as 2016, focusing on our economic record of the last four years."
         }
     },
     {
@@ -1119,7 +1119,31 @@ campaignTrail_temp.answers_json = [
         "pk": 42526,
         "fields": {
             "question": 42518,
-            "description": "f"
+            "description": "My fellow Americans, we're all in this together. We need to be cautious, but that doesn't dismiss the importance of casting your vote in this historic election. If you can, vote by mail. If not, mask up and social distance."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42530,
+        "fields": {
+            "question": 42519,
+            "description": "This election will come down to two fairly large industrial states: Pennsylvania and Ohio. Donald and I won them in 2016, and they're quite worrisome this year. Biden may be a Scranton boy, but Pennsylvania won't be Biden country!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42531,
+        "fields": {
+            "question": 42519,
+            "description": "I am much different from Mr. Trump, and I think without him, we have a better shot in the Southwest. Hispanics were turned off four years ago, and we could do better this time. My eyes are on Nevada, Arizona, and potentially Colorado."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 42532,
+        "fields": {
+            "question": 42519,
+            "description": "I'm getting quite concerned about the usually Republican Southeast. With my social conservatism, we can hold states like the all-important state of Florida, Georgia, and North Carolina. Let's also try to get Virginia back after Tim Kaine gave Hillary the state four years ago."
         }
     }
 ]
@@ -5086,7 +5110,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 300,
             "state": 1108,
-            "state_multiplier": 1.05
+            "state_multiplier": 1.1
         }
     },
     {
@@ -5392,7 +5416,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 300,
             "state": 1142,
-            "state_multiplier": 0.99
+            "state_multiplier": 1.04
         }
     },
     {
@@ -7446,6 +7470,16 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 301,
             "global_multiplier": 0.0005
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 42527,
+        "fields": {
+            "answer": 42526,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "global_multiplier": 0.01
+        }
     }
 ]
 
@@ -9019,6 +9053,26 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue_score": -0.5375,
             "issue_importance": 1
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 42528,
+        "fields": {
+            "answer": 42526,
+            "issue": 112,
+            "issue_score": 0,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 42537,
+        "fields": {
+            "answer": 42520,
+            "issue": 111,
+            "issue_score": 0.2,
+            "issue_importance": 3
+        }
     }
 ]
 
@@ -9054,6 +9108,138 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 301,
             "affected_candidate": 301,
             "state_multiplier": 0.0014
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42533,
+        "fields": {
+            "answer": 42520,
+            "state": 1122,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42534,
+        "fields": {
+            "answer": 42520,
+            "state": 1149,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42535,
+        "fields": {
+            "answer": 42520,
+            "state": 1121,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42539,
+        "fields": {
+            "answer": 42530,
+            "state": 1134,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42540,
+        "fields": {
+            "answer": 42530,
+            "state": 1137,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42543,
+        "fields": {
+            "answer": 42531,
+            "state": 1102,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42544,
+        "fields": {
+            "answer": 42531,
+            "state": 1105,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42545,
+        "fields": {
+            "answer": 42531,
+            "state": 1127,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42546,
+        "fields": {
+            "answer": 42532,
+            "state": 1108,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42547,
+        "fields": {
+            "answer": 42532,
+            "state": 1109,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42548,
+        "fields": {
+            "answer": 42532,
+            "state": 1132,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 42549,
+        "fields": {
+            "answer": 42532,
+            "state": 1145,
+            "candidate": 301,
+            "affected_candidate": 301,
+            "state_multiplier": 0.005
         }
     }
 ]
@@ -9561,6 +9747,51 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 6203,
             "candidate": 301,
             "answer_feedback": "Let's see what kind of an effect this story has on the final days of the campaign."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42529,
+        "fields": {
+            "answer": 42526,
+            "candidate": 301,
+            "answer_feedback": "Will your message on bringing people together be enough to give you a full term in office?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42536,
+        "fields": {
+            "answer": 42520,
+            "candidate": 301,
+            "answer_feedback": "There wasn't much doubt this is where you would've been campaigning at the end. Most doubt Trump's success four years ago could be replicated, but you and Donald have shocked the country many times. Best of luck to you, President Pence."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42538,
+        "fields": {
+            "answer": 42530,
+            "candidate": 301,
+            "answer_feedback": "Ohio has been a bellwether for decades, and Pennsylvania tipped the 2016 election to Trump. This is what many people expected from you, and we'll see if these large states deliver the presidency to you in 2020. Best of luck to you, President Pence."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42541,
+        "fields": {
+            "answer": 42531,
+            "candidate": 301,
+            "answer_feedback": "Some are calling you crazy to contest Colorado this year, but Arizona and Nevada not as much. Latinos can be more socially conservative, and it's possible your religion and stance on social issues could help in these states. Best of luck to you, President Pence."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 42550,
+        "fields": {
+            "answer": 42532,
+            "candidate": 301,
+            "answer_feedback": "This is where Biden is concentrating his time as well. These states are expected to be do-or-die this year, even though Georgia has been Republican since 1992 and North Carolina since 2008. Some call you crazy on Virginia though. Best of luck to you, President Pence."
         }
     }
 ]
