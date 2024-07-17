@@ -8465,9 +8465,9 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 3228,
         "fields": {
             "answer": 6158,
-            "issue": 113,
-            "issue_score": -0.45,
-            "issue_importance": 4
+            "issue": 110,
+            "issue_score": -0.4375,
+            "issue_importance": 1
         }
     },
     {
@@ -8475,9 +8475,9 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 3229,
         "fields": {
             "answer": 6158,
-            "issue": 111,
-            "issue_score": 0.45,
-            "issue_importance": 4
+            "issue": 114,
+            "issue_score": -0.5375,
+            "issue_importance": 1
         }
     },
     {
@@ -8578,6 +8578,16 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 111,
             "issue_score": -0.35,
             "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 3246,
+        "fields": {
+            "answer": 6173,
+            "issue": 114,
+            "issue_score": -0.5875,
+            "issue_importance": 1
         }
     },
     {
@@ -10685,6 +10695,57 @@ campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/mIsw7Up.png";
 campaignTrail_temp.candidate_last_name = "Trump";
 campaignTrail_temp.running_mate_last_name = "Pence";
 
+campaignTrail_temp.multiple_endings = true;
+endingPicker = (out, totv, aa, quickstats) => {
+
+    function setImage(url) {
+        if(url == '' || url == null) return;
+        let interval = setInterval(function () {
+            img = document.getElementsByClassName("person_image")[0];
+            if (img != null) {
+                img.src = url;
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    if(quickstats[0] == 0) {
+        setImage("https://nickloyd.com/wp-content/uploads/2013/11/dor7.jpg");
+        return `<h3>We are Losing Our Religion</h3><p>We have no moral values in our country anymore. It started all the way back in the 60's, with Engel v. Vitale outlawing school prayer. Ten years later, Roe v. Wade legalizes abortion on demand. <p><p>We had a glimmer of hope in 1980, after Reagan was elected. We had him for eight years and Poppy for another four after that. We had a chance to bring morality and religion back. Roe wasn't overturned, while we got close. <p><p> The Crooked Clintons came along afterwards in 1992. They allowed homosexuals in the military, and then just twenty years later in 2015, Obergefell v. Hodges legalized gay marriage across the country. <p><p>As sad as it is, the bible is against all of these things. When we try to restore Christianity to the country, it never works. That was proven tonight, after we lost the 2020 election. 538 electoral votes for Joe Biden and 0 electoral votes for me, Mike Pence. </p>`;
+    }
+    if(quickstats[0] > 0 && quickstats[0] < 125) {
+        setImage("https://i.ebayimg.com/images/g/7osAAOSwzAtit6lR/s-l1200.webp");
+        return `<h3>Mike, this was a blow-out loss.</h3><p>Whoa there, many thought it would be hard for you after what happened to your party. But Biden was never expected to win like this. Winning states that haven't gone blue since Barry Goldwater, the man who began the conservative Republican movement, lost in 1964.<p><p>Most say it was that little rascal Mike MyPillow Lindell, others say the Republicans were just in shambles this year. Only if you handled COVID and BLM better, you could've had a chance, Mike. Your political career is over, so it's time for you to go back to Indiana and live a retirement as peaceful as it can get. Meanwhile, Joe Biden becomes the 47th President of the United States in attempts to move the country forward from the hellhole of the last four years. <p><p>You lost just as bad as Jimmy Carter did in 1980, but what if he won? What would the 1984 election look like? My twelfth mod, slated to release on Carter's 100th birthday on October 1, 2024, is 1984: Carterverse, or 1984C. </p>`;
+    }
+    if(quickstats[0] > 124 && quickstats[0] < 232) {
+        setImage("");
+        return `<h3>Sorry, Mike. But this was expected. </h3><p>It is painful to lose an election this badly, but this is the result most pundits, Allan Lichtman, the mainstream media, and the general consensus was expecting. A convincing loss for you and a convincing win for former Vice President Joe Biden. Even during an unprecedented year with a global pandemic and mass protests and riots. It just seems like the country wanted to move on from anyone tied to the administration of the first President to ever get impeached and removed from office. <p><p>Now it's up to Joe Biden to move the country forward through the COVID-19 pandemic, social unrest, and potential attacks on our democracy from Mr Trump's hardcore supporters. He is quite old, and will be older in four years for a younger Republican to challenge him and win the White House back. Vice President Haley and Florida Governor Ron DeSantis are the frontrunners for the 2024 Republican nomination at the moment. But that can certainly change, right? <p><p>As for you though, you can just move back to Indiana and live a peaceful, happy retirement knowing that you attempted to move the country forward after the last three years. </p>`;
+    }
+    if(quickstats[0] > 231 && quickstats[0] < 269) {
+        setImage("");
+        return `<h3>God dammit, My Pathetic Pillow. </h3><p>Those were your initial thoughts after Joe Biden was projected the winner on November 7th after long delays in vote counts. You think about how Mike Lindell played splinter, taking away MAGA Republican votes from you. Nevertheless, you do concede to the former Vice President. <p><p>It was a narrow contest, and although many expected you to lose, you did outperform expectations. You tried your hardest to handle COVID well, but the country just wanted to move on from the Republican Chaos of the last four years. But hey, you are young enough to redeem yourself, perhaps in 2024, to seek the Republican nomination for President again. Most say you can only win if Biden has a bad four years though. </p>`;
+    }
+    if(quickstats[0] == 269) {
+        setImage("https://dims.apnews.com/dims4/default/45e6b5b/2147483647/strip/true/crop/3000x2000+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fafs-prod%2Fmedia%2F6edb1d43a2194382b01938a993f05d18%2F3000.jpeg");
+        return `<h3>Only if 2020 couldn't get any crazier...</h3><p>It does. <p><p>The electoral college is deadlocked, either because both you and Biden got 269 electoral votes, or for whatever reason, Mike Lindell got enough states to deadlock the Electoral College. <p><p>This is about to cause so much more chaos and civil unrest, and as of the moment, it is hard to know who's favored but Biden is a tad more likely to win. But there is plenty of time to fight, right?</p>`;
+    }
+    if(quickstats[0] > 269 && quickstats[0] < 307) {
+        setImage("");
+        return `<h3>Well done, Mr. President. This is stunning. </h3><p>Now this is quite the upset, as you were just as doomed as Harry Truman in 1948 and your predecessor just four years ago. Yet you prevailed, like both Harry and Donald. <p><p> You are being applauded for your effort in leading the country through some rather difficult times. An unprecedented global pandemic has ravaged the country, and the world. Incumbents across the country have survived due to their successful leadership, and you were the least likely to survive. Yet, you did. America wants to get out of this pandemic, and there is no reason to change leadership with that Orange criminal out of office, right? It's strictly up to you to get this country back on track over the next four years, and if all goes well, you could get re-elected in 2024. </p>`;
+    }
+    if(quickstats[0] > 306 && quickstats[0] < 356) {
+        setImage("https://www.politico.com/dims4/default/39642ff/2147483647/strip/true/crop/1160x773+0+0/resize/630x420!/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F83%2Fc5%2Ff14654ba455d82012a9579e7a35f%2F20191210-mike-pence-gty-773.jpg");
+        return `<h3>A true Republican victory, once again. </h3><p>Well done, Mike. Not only did you outperform expectations and win a full term in office, but you also did better than Donald Trump did in 2016. It seemed as though the country wanted to rally around the flag during the unprecedented times 2020 has brought. From the first impeachment conviction of an American president in history, to a global pandemic keeping the world locked in at home, to massive civil unrest caused by the untimely deaths of innocent Black Americans, to much more. <p><p>Compassionate conservatism is the way to bring people together during such a difficult time. Just be prepared for whatever else comes your way throughout the next four years. 2024 is expected to be a heavy lift for you though, but that was expected for you and Trump the last two times. So anything's possible right? Best of luck to you, President Pence. </p>`;
+    }
+    if(quickstats[0] > 355 && quickstats[0] < 538) {
+        setImage("https://i0.wp.com/www.nationalreview.com/wp-content/uploads/2024/06/ronald-reagan-1983.jpg?fit=789%2C460&ssl=1");
+        return `<h3>Upon a Cross of Reaganism Again </h3><p>As you return the GOP back to Reaganism, you win the election in a landslide. Landslides like Reagan and HW Bush's victories in the 80's. You won states that haven't gone red since these landslides. <p><p>As you reflect on your victory and presidency so far, you realize that Trumpism was an asinine joke, and you take credit for removing that cancer from Reagan's Republican Party. The GOP has reverted back to principles, compassionate conservatism, and positivity, and once we get out of the COVID-19 pandemic, it will be Morning Again in America. Under Trump and Biden's America, it would've been Midnight in America, so you are sure lucky to have gotten a full term with this much of a mandate. And you could get two full terms if all goes well. </p>`;
+    }
+    if(quickstats[0] == 538) {
+        setImage("https://s.abcnews.com/images/Politics/trump8-rt-ml-210106_1609955421965_hpEmbed_3x2_992.jpg");
+        return `<h3>JANUARY 6, 2021: THE ELLIPSE IN WASHINGTON DC </h3><p>We're all gonna walk down to the Capitol to cheer on our beautiful Senators and Representatives who will be certifying this great, historic presidential election that, believe me, Lindell won big league. This impeachment was a total witch hunt against the great hardworking men and women of America. My Beautiful Pillow won this election big league. It's true. Fox News won't even show it because they prefer Crazy Mike Pence and Nimrata Haley over the best President of our lifetimes, Donald J. Trump. We will seek retribution against this criminal witch hunt, and we are going to take this country back and make America great again. Thank you. God bless you. </p>`;
+    }
+}
 
 
 campaignTrail_temp.jet_data = [{
@@ -10700,7 +10761,93 @@ campaignTrail_temp.jet_data = [{
         "runImage": "https://i.imgur.com/mIsw7Up.png",
         "canName": "Trump",
         "canImage": "https://upload.wikimedia.org/wikipedia/commons/7/70/Donald_Trump_October_2020.jpg"
-    }
+    },
+    "endings_enabled": true,
+    "ending_data": {
+        "1721146071458": {
+            "id": 1721146071458,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://nickloyd.com/wp-content/uploads/2013/11/dor7.jpg",
+            "endingText": "<h3>We are Losing Our Religion</h3><p>We have no moral values in our country anymore. It started all the way back in the 60's, with Engel v. Vitale outlawing school prayer. Ten years later, Roe v. Wade legalizes abortion on demand. <p><p>We had a glimmer of hope in 1980, after Reagan was elected. We had him for eight years and Poppy for another four after that. We had a chance to bring morality and religion back. Roe wasn't overturned, while we got close. <p><p> The Crooked Clintons came along afterwards in 1992. They allowed homosexuals in the military, and then just twenty years later in 2015, Obergefell v. Hodges legalized gay marriage across the country. <p><p>As sad as it is, the bible is against all of these things. When we try to restore Christianity to the country, it never works. That was proven tonight, after we lost the 2020 election. 538 electoral votes for Joe Biden and 0 electoral votes for me, Mike Pence. </p>",
+            "amount": "0"
+        },
+        "1721177188403": {
+            "id": 1721177188403,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://i.ebayimg.com/images/g/7osAAOSwzAtit6lR/s-l1200.webp",
+            "endingText": "<h3>Mike, this was a blow-out loss.</h3><p>Whoa there, many thought it would be hard for you after what happened to your party. But Biden was never expected to win like this. Winning states that haven't gone blue since Barry Goldwater, the man who began the conservative Republican movement, lost in 1964.<p><p>Most say it was that little rascal Mike MyPillow Lindell, others say the Republicans were just in shambles this year. Only if you handled COVID and BLM better, you could've had a chance, Mike. Your political career is over, so it's time for you to go back to Indiana and live a retirement as peaceful as it can get. Meanwhile, Joe Biden becomes the 47th President of the United States in attempts to move the country forward from the hellhole of the last four years. <p><p>You lost just as bad as Jimmy Carter did in 1980, but what if he won? What would the 1984 election look like? My twelfth mod, slated to release on Carter's 100th birthday on October 1, 2024, is 1984: Carterverse, or 1984C. </p>",
+            "amount": "0"
+        },
+        "1721177657604": {
+            "id": 1721177657604,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>Sorry, Mike. But this was expected. </h3><p>It is painful to lose an election this badly, but this is the result most pundits, Allan Lichtman, the mainstream media, and the general consensus was expecting. A convincing loss for you and a convincing win for former Vice President Joe Biden. Even during an unprecedented year with a global pandemic and mass protests and riots. It just seems like the country wanted to move on from anyone tied to the administration of the first President to ever get impeached and removed from office. <p><p>Now it's up to Joe Biden to move the country forward through the COVID-19 pandemic, social unrest, and potential attacks on our democracy from Mr Trump's hardcore supporters. He is quite old, and will be older in four years for a younger Republican to challenge him and win the White House back. Vice President Haley and Florida Governor Ron DeSantis are the frontrunners for the 2024 Republican nomination at the moment. But that can certainly change, right? <p><p>As for you though, you can just move back to Indiana and live a peaceful, happy retirement knowing that you attempted to move the country forward after the last three years. </p>",
+            "amount": "124"
+        },
+        "1721178500851": {
+            "id": 1721178500851,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>God dammit, My Pathetic Pillow. </h3><p>Those were your initial thoughts after Joe Biden was projected the winner on November 7th after long delays in vote counts. You think about how Mike Lindell played splinter, taking away MAGA Republican votes from you. Nevertheless, you do concede to the former Vice President. <p><p>It was a narrow contest, and although many expected you to lose, you did outperform expectations. You tried your hardest to handle COVID well, but the country just wanted to move on from the Republican Chaos of the last four years. But hey, you are young enough to redeem yourself, perhaps in 2024, to seek the Republican nomination for President again. Most say you can only win if Biden has a bad four years though. </p>",
+            "amount": "231"
+        },
+        "1721178515317": {
+            "id": 1721178515317,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://dims.apnews.com/dims4/default/45e6b5b/2147483647/strip/true/crop/3000x2000+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fafs-prod%2Fmedia%2F6edb1d43a2194382b01938a993f05d18%2F3000.jpeg",
+            "endingText": "<h3>Only if 2020 couldn't get any crazier...</h3><p>It does. <p><p>The electoral college is deadlocked, either because both you and Biden got 269 electoral votes, or for whatever reason, Mike Lindell got enough states to deadlock the Electoral College. <p><p>This is about to cause so much more chaos and civil unrest, and as of the moment, it is hard to know who's favored but Biden is a tad more likely to win. But there is plenty of time to fight, right?</p>",
+            "amount": "269"
+        },
+        "1721178515501": {
+            "id": 1721178515501,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>Well done, Mr. President. This is stunning. </h3><p>Now this is quite the upset, as you were just as doomed as Harry Truman in 1948 and your predecessor just four years ago. Yet you prevailed, like both Harry and Donald. <p><p> You are being applauded for your effort in leading the country through some rather difficult times. An unprecedented global pandemic has ravaged the country, and the world. Incumbents across the country have survived due to their successful leadership, and you were the least likely to survive. Yet, you did. America wants to get out of this pandemic, and there is no reason to change leadership with that Orange criminal out of office, right? It's strictly up to you to get this country back on track over the next four years, and if all goes well, you could get re-elected in 2024. </p>",
+            "amount": "269"
+        },
+        "1721178519693": {
+            "id": 1721178519693,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://www.politico.com/dims4/default/39642ff/2147483647/strip/true/crop/1160x773+0+0/resize/630x420!/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F83%2Fc5%2Ff14654ba455d82012a9579e7a35f%2F20191210-mike-pence-gty-773.jpg",
+            "endingText": "<h3>A true Republican victory, once again. </h3><p>Well done, Mike. Not only did you outperform expectations and win a full term in office, but you also did better than Donald Trump did in 2016. It seemed as though the country wanted to rally around the flag during the unprecedented times 2020 has brought. From the first impeachment conviction of an American president in history, to a global pandemic keeping the world locked in at home, to massive civil unrest caused by the untimely deaths of innocent Black Americans, to much more. <p><p>Compassionate conservatism is the way to bring people together during such a difficult time. Just be prepared for whatever else comes your way throughout the next four years. 2024 is expected to be a heavy lift for you though, but that was expected for you and Trump the last two times. So anything's possible right? Best of luck to you, President Pence. </p>",
+            "amount": "306"
+        },
+        "1721178523380": {
+            "id": 1721178523380,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://i0.wp.com/www.nationalreview.com/wp-content/uploads/2024/06/ronald-reagan-1983.jpg?fit=789%2C460&ssl=1",
+            "endingText": "<h3>Upon a Cross of Reaganism Again </h3><p>As you return the GOP back to Reaganism, you win the election in a landslide. Landslides like Reagan and HW Bush's victories in the 80's. You won states that haven't gone red since these landslides. <p><p>As you reflect on your victory and presidency so far, you realize that Trumpism was an asinine joke, and you take credit for removing that cancer from Reagan's Republican Party. The GOP has reverted back to principles, compassionate conservatism, and positivity, and once we get out of the COVID-19 pandemic, it will be Morning Again in America. Under Trump and Biden's America, it would've been Midnight in America, so you are sure lucky to have gotten a full term with this much of a mandate. And you could get two full terms if all goes well. </p>",
+            "amount": "355"
+        },
+        "1721178533475": {
+            "id": 1721178533475,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://s.abcnews.com/images/Politics/trump8-rt-ml-210106_1609955421965_hpEmbed_3x2_992.jpg",
+            "endingText": "<h3>JANUARY 6, 2021: THE ELLIPSE IN WASHINGTON DC </h3><p>We're all gonna walk down to the Capitol to cheer on our beautiful Senators and Representatives who will be certifying this great, historic presidential election that, believe me, Lindell won big league. This impeachment was a total witch hunt against the great hardworking men and women of America. My Beautiful Pillow won this election big league. It's true. Fox News won't even show it because they prefer Crazy Mike Pence and Nimrata Haley over the best President of our lifetimes, Donald J. Trump. We will seek retribution against this criminal witch hunt, and we are going to take this country back and make America great again. Thank you. God bless you. </p>",
+            "amount": "538"
+        }
+    },
+    "mapping_enabled": false,
+    "mapping_data": {}
 }
 ]
 
