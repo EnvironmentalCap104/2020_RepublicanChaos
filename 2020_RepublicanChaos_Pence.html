@@ -1131,7 +1131,103 @@ campaignTrail_temp.answers_json = [
             "question": 42518,
             "description": "We will remain in Afghanistan for however long it takes to restore peace and stability, and bring democracy to Afghanistan. We will never let terrorism destroy our great country ever again."
         }
-    }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100000,
+        "fields": {
+            "question": 20000,
+            "description": "Paul Ryan has done an excellent job as Speaker of the House, and he has served Wisconsin in Congress for many years. He is the right person to help move this country forward after the chaos of the last three years. Not to mention, if we win Wisconsin, we have a great shot at victory."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100001,
+        "fields": {
+            "question": 20000,
+            "description": "Ryan knows how to bring people together, as he has done so very well as Speaker and as a Representative in general. This is also a good redemption moment for Ryan, as he failed to win the vice presidency with Romney eight years ago."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100002,
+        "fields": {
+            "question": 20001,
+            "description": "Look everyone, it is time that we move on from the Trump administration. If we need to go moderate to bring people together, then that's what Paul Ryan is here for."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100003,
+        "fields": {
+            "question": 20001,
+            "description": "l"
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100004,
+        "fields": {
+            "question": 20002,
+            "description": "It's time. We've been fighting in Afghanistan since September 11, and it's time to move out of there. I will sign an executive order to bring the troops home immediately."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100005,
+        "fields": {
+            "question": 20002,
+            "description": "It's time. We've been fighting in Afghanistan since September 11, and it's time to move out of there. I will sign an executive order to bring the troops home immediately."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100006,
+        "fields": {
+            "question": 20003,
+            "description": "It's time. We've been fighting in Afghanistan since September 11, and it's time to move out of there. I will sign an executive order to bring the troops home immediately."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100007,
+        "fields": {
+            "question": 20003,
+            "description": "It's time. We've been fighting in Afghanistan since September 11, and it's time to move out of there. I will sign an executive order to bring the troops home immediately."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100008,
+        "fields": {
+            "question": 20004,
+            "description": "It's time. We've been fighting in Afghanistan since September 11, and it's time to move out of there. I will sign an executive order to bring the troops home immediately."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100009,
+        "fields": {
+            "question": 20004,
+            "description": "It's time. We've been fighting in Afghanistan since September 11, and it's time to move out of there. I will sign an executive order to bring the troops home immediately."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100010,
+        "fields": {
+            "question": 20005,
+            "description": "It's time. We've been fighting in Afghanistan since September 11, and it's time to move out of there. I will sign an executive order to bring the troops home immediately."
+        }
+    },
+  {
+        "model": "campaign_trail.answer",
+        "pk": 100011,
+        "fields": {
+            "question": 20005,
+            "description": "It's time. We've been fighting in Afghanistan since September 11, and it's time to move out of there. I will sign an executive order to bring the troops home immediately."
+        }
+    },
 ]
 
 campaignTrail_temp.states_json = [
@@ -10854,6 +10950,8 @@ campaignTrail_temp.jet_data = [{
 campaignTrail_temp.cyoa = true
 cyoAdventure = function (a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
+    if (e.question_number == 5) {
+        window.setTimeout(e.vpSwitcher, 20)
     if(ans == 3310){
         campaignTrail_temp.candidate_json[0]["fields"].first_name = "John";
         campaignTrail_temp.candidate_json[0]["fields"].last_name = "McCain";
@@ -10891,4 +10989,70 @@ cyoAdventure = function (a) {
         campaignTrail_temp.candidate_last_name = 'Pence';
         campaignTrail_temp.running_mate_last_name = "2020"
     }
+
+    if(ans == 6121){
+
+    campaignTrail_temp.questions_json[6] = {
+        "model": "campaign_trail.question",
+        "pk": 20004,
+        "fields": {
+          "priority": 1,
+          "description": "Congress has nominated Tom Cotton to serve as Vice President, and therefore you choose him as your running-mate in 2020. What do you have to say about him?",
+          "likelihood": 1
+        }
+      }
+      campaignTrail_temp.questions_json[17] = {
+        "model": "campaign_trail.question",
+        "pk": 20005,
+        "fields": {
+          "priority": 1,
+          "description": "Some in the Republican Party are quite concerned that Tom Cotton is too closely aligned to former President Donald Trump. How will you defend Tom Cotton as the right choice to stay as Vice President?",
+          "likelihood": 1
+        }
+      }
+    }
+        
+    if(ans == 6122){
+
+    campaignTrail_temp.questions_json[6] = {
+        "model": "campaign_trail.question",
+        "pk": 20000,
+        "fields": {
+          "priority": 1,
+          "description": "Congress has nominated Paul Ryan to serve as Vice President, and therefore you choose him as your running-mate in 2020. What do you have to say about him?",
+          "likelihood": 1
+        }
+      }
+      campaignTrail_temp.questions_json[17] = {
+        "model": "campaign_trail.question",
+        "pk": 20001,
+        "fields": {
+          "priority": 1,
+          "description": "Some in the Republican Party are quite concerned that Paul Ryan is too moderate for their cause, especially as he is strongly anti-Trump. How will you defend Paul Ryan as the right choice to stay as Vice President?",
+          "likelihood": 1
+        }
+      }
+    }
+        
+    if(ans == 6123){
+
+    campaignTrail_temp.questions_json[6] = {
+        "model": "campaign_trail.question",
+        "pk": 20002,
+        "fields": {
+          "priority": 1,
+          "description": "Congress has nominated John Thune to serve as Vice President, and therefore you choose him as your running-mate in 2020. What do you have to say about him?",
+          "likelihood": 1
+        }
+      }
+      campaignTrail_temp.questions_json[17] = {
+        "model": "campaign_trail.question",
+        "pk": 20003,
+        "fields": {
+          "priority": 1,
+          "description": "Some in the Republican Party are quite concerned that John Thune is too moderate for their cause, especially as he is strongly anti-Trump and disagrees with the former President on many issues. How will you defend John Thune as the right choice to stay as Vice President?",
+          "likelihood": 1
+        }
+      }
+    }          
 }
