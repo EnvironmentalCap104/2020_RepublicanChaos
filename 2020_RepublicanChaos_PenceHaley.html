@@ -11271,6 +11271,8 @@ cyoAdventure = function (a) {
 
     if(ans == 6121){
 
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 155, \"fields\": {\"candidate\": 301, \"running_mate\": 50003}}]");
+
     campaignTrail_temp.questions_json[6] = {
         "model": "campaign_trail.question",
         "pk": 20004,
@@ -11293,6 +11295,8 @@ cyoAdventure = function (a) {
         
     if(ans == 6122){
 
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 155, \"fields\": {\"candidate\": 301, \"running_mate\": 50002}}]");
+        
     campaignTrail_temp.questions_json[6] = {
         "model": "campaign_trail.question",
         "pk": 20000,
@@ -11315,6 +11319,8 @@ cyoAdventure = function (a) {
         
     if(ans == 6123){
 
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 155, \"fields\": {\"candidate\": 301, \"running_mate\": 50001}}]");
+        
     campaignTrail_temp.questions_json[6] = {
         "model": "campaign_trail.question",
         "pk": 20002,
@@ -11333,10 +11339,32 @@ cyoAdventure = function (a) {
           "likelihood": 1
         }
       }
-    }          
-}
+    }
+                
+    if(ans == 6124){
 
-e=campaignTrail_temp
+    campaignTrail_temp.running_mate_json = JSON.parse("[{\"model\": \"campaign_trail.running_mate\", \"pk\": 155, \"fields\": {\"candidate\": 301, \"running_mate\": 50000}}]");
+        
+    campaignTrail_temp.questions_json[6] = {
+        "model": "campaign_trail.question",
+        "pk": 1325,
+        "fields": {
+          "priority": 1,
+          "description": "Congress has nominated Nikki Haley to serve as Vice President, and therefore you choose her as your running-mate in 2020. What do you have to say about her?",
+          "likelihood": 1
+        }
+      }
+      campaignTrail_temp.questions_json[17] = {
+        "model": "campaign_trail.question",
+        "pk": 1321,
+        "fields": {
+          "priority": 1,
+          "description": "Some in the Republican Party are quite concerned that Nikki Haley is too moderate for their cause, especially as she is strongly anti-Trump. How will you defend Nikki Haley as the right choice to stay as Vice President?",
+          "likelihood": 1
+        }
+      }
+    }
+}
 
 var changeGameDisp = (hide) => {
     disp = "";
