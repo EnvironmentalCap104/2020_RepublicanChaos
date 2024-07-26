@@ -166,7 +166,7 @@ campaignTrail_temp.questions_json = [
         "pk": 1322,
         "fields": {
             "priority": 9,
-            "description": "A major controversy in Trump's campaigns was about whether or not he will accept the results of the election. In 2016, he drew a lot of controversy saying he will accept the results of the election if he won. Mike Lindell's comments about accepting the election have been similarly controversial. Will you accept the results of the 2020 election no matter the outcome?",
+            "description": "A major controversy in Trump's campaigns was about whether or not he would accept the results of the election. In 2016, he drew a lot of controversy saying he will accept the results of the election if he won. Mike Lindell's comments about accepting the election have been similarly controversial. Will you accept the results of the 2020 election no matter the outcome?",
             "likelihood": 1
         }
     },
@@ -283,7 +283,7 @@ campaignTrail_temp.questions_json = [
         "pk": 42820,
         "fields": {
             "priority": 0,
-            "description": "It is October 14, 2020. The New York Post has broken a story about a laptop that Hunter Biden purportedly lost. There has been a lot of investigations and controversies surrounding this story as well. Do you have any comment?",
+            "description": "It is October 14, 2020. The New York Post has broken a story about a laptop that Hunter Biden purportedly lost. There has been a lot of investigations and controversies surrounding this story as well. However, many question the validity of this story because the New York Post is known to have a strong conservative bias. Do you have any comment?",
             "likelihood": 1
         }
     },
@@ -425,7 +425,7 @@ campaignTrail_temp.answers_json = [
         "pk": 6127,
         "fields": {
             "question": 1304,
-            "description": "We will mention it here and there, but let’s not go overboard. We have an election we need to win."
+            "description": "We will mention it here and there, but let’s not go overboard. In this election, I am focused on the future, and the unprecedented crises facing our nation."
         }
     },
     {
@@ -5408,7 +5408,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 300,
             "state": 1132,
-            "state_multiplier": 1.11
+            "state_multiplier": 1.1
         }
     },
     {
@@ -10799,7 +10799,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 42748,
             "candidate": 301,
-            "answer_feedback": "You don't have to abandon your faith to come out against LGBTQ+ people like this, especially as the country has become more and more pro-LGBT by the minute."
+            "answer_feedback": "You don't have to use your faith to come out against LGBTQ+ people like this, especially as the country has become more and more pro-LGBT by the minute."
         }
     },
     {
@@ -11241,11 +11241,6 @@ cyoAdventure = function (a) {
     if (e.question_number == 5) {
         window.setTimeout(e.vpSwitcher, 20)
       }       
-    if(ans == 3310){
-        campaignTrail_temp.candidate_json[0]["fields"].first_name = "John";
-        campaignTrail_temp.candidate_json[0]["fields"].last_name = "McCain";
-        campaignTrail_temp.question_number = 24;
-    }
     if(ans == 6121){
         campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/mIsw7Up.png';
         campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/DSDckkx.png"
